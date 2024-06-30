@@ -189,6 +189,54 @@
         }
       }
     },
+    "jetbrains.idea-community@latest": {
+      "last_modified": "2024-06-25T12:13:56Z",
+      "resolved": "github:NixOS/nixpkgs/9c513fc6fb75142f6aec6b7545cb8af2236b80f5#jetbrains.idea-community",
+      "source": "devbox-search",
+      "version": "2024.1.4",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4zz4pwzkrkh1y1jy8yz17f09zq8axf76-idea-community-2024.1.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/4zz4pwzkrkh1y1jy8yz17f09zq8axf76-idea-community-2024.1.4"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/w4j5jb5ng7gxl9337j5dmsz1vf5vgh4l-idea-community-2024.1.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/w4j5jb5ng7gxl9337j5dmsz1vf5vgh4l-idea-community-2024.1.4"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/nm8k1nwld40r1v75xnwlxi2qha466i3j-idea-community-2024.1.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/nm8k1nwld40r1v75xnwlxi2qha466i3j-idea-community-2024.1.4"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/lwlkz2nvjf1llknfc0a09m8dbbh01fnd-idea-community-2024.1.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/lwlkz2nvjf1llknfc0a09m8dbbh01fnd-idea-community-2024.1.4"
+        }
+      }
+    },
     "pulumictl@latest": {
       "last_modified": "2024-06-12T20:55:33Z",
       "resolved": "github:NixOS/nixpkgs/a9858885e197f984d92d7fe64e9fff6b2e488d40#pulumictl",
