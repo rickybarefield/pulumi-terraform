@@ -12,8 +12,9 @@
   ],
   "shell": {
     "init_hook": [
-      "echo 'Welcome to devbox!' > /dev/null",
-      ". $VENV_DIR/bin/activate"
+      "echo 'Welcome to pulumi-terraform development environment' > /dev/null",
+      ". $VENV_DIR/bin/activate",
+      "alias idea-community=\"idea-community > idea.log 2>&1 &\""
     ],
     "scripts": {
       "test": [

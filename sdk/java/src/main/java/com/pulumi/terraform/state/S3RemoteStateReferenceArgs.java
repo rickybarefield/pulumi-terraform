@@ -1,4 +1,4 @@
-// Copyright 2016-2020, Pulumi Corporation.
+// Copyright 2016-2024, Pulumi Corporation.
 
 package com.pulumi.terraform.state;
 
@@ -168,25 +168,125 @@ public class S3RemoteStateReferenceArgs extends RemoteStateReferenceArgs {
 
     public static class S3RemoteStateReferenceArgsBuilder {
 
-        public S3RemoteStateReferenceArgsBuilder bucket(String name) {
+        public S3RemoteStateReferenceArgsBuilder bucket(String bucket) {
 
-            this.bucket = Output.of(name);
-
+            this.bucket = Output.of(bucket);
             return this;
         }
 
-        public S3RemoteStateReferenceArgsBuilder key(String name) {
+        public S3RemoteStateReferenceArgsBuilder key(String key) {
 
-            this.key = Output.of(name);
-
+            this.key = Output.of(key);
             return this;
         }
 
-        public S3RemoteStateReferenceArgsBuilder region(String name) {
+        public S3RemoteStateReferenceArgsBuilder region(String region) {
 
-            this.region = Optional.of(Output.of(name));
-
+            this.region = Optional.of(Output.of(region));
             return this;
         }
+
+        public S3RemoteStateReferenceArgsBuilder endpoint(String endpoint) {
+
+            this.endpoint = Optional.of(Output.of(endpoint));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder accessKey(String accessKey) {
+
+            this.accessKey = Optional.of(Output.of(accessKey));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder secretKey(String secretKey) {
+
+            this.secretKey = Optional.of(Output.of(secretKey));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder profile(String profile) {
+
+            this.profile = Optional.of(Output.of(profile));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder sharedCredentialsFile(String sharedCredentialsFile) {
+
+            this.sharedCredentialsFile = Optional.of(Output.of(sharedCredentialsFile));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder token(String token) {
+
+            this.token = Optional.of(Output.of(token));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder roleArn(String roleArn) {
+
+            this.roleArn = Optional.of(Output.of(roleArn));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder externalId(String externalId) {
+
+            this.externalId = Optional.of(Output.of(externalId));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder sessionName(String sessionName) {
+
+            this.sessionName = Optional.of(Output.of(sessionName));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder workspaceKeyPrefix(String workspaceKeyPrefix) {
+
+            this.workspaceKeyPrefix = Optional.of(Output.of(workspaceKeyPrefix));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder iamEndpoint(String iamEndpoint) {
+
+            this.iamEndpoint = Optional.of(Output.of(iamEndpoint));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder stsEndpoint(String stsEndpoint) {
+
+            this.stsEndpoint = Optional.of(Output.of(stsEndpoint));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder skipCredentialsValidation(Boolean skipCredentialsValidation) {
+
+            this.skipCredentialsValidation = Optional.of(Output.of(skipCredentialsValidation));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder skipRegionValidation(Boolean skipRegionValidation) {
+
+            this.skipRegionValidation = Optional.of(Output.of(skipRegionValidation));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder skipMetadataApiCheck(Boolean skipMetadataApiCheck) {
+
+            this.skipMetadataApiCheck = Optional.of(Output.of(skipMetadataApiCheck));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder forcePathStyle(Boolean forcePathStyle) {
+
+            this.forcePathStyle = Optional.of(Output.of(forcePathStyle));
+            return this;
+        }
+
+        public S3RemoteStateReferenceArgsBuilder workspace(String workspace) {
+
+            this.workspace = Optional.of(Output.of(workspace));
+            return this;
+        }
+
     }
 }

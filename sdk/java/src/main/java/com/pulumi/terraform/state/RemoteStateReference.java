@@ -9,7 +9,7 @@ import java.util.Map;
 
 /**
  * Manages a reference to a Terraform Remote State. The root outputs of the remote state are available
- * via the <see cref="Outputs"/> property or the <see cref="GetOutput"/> method.
+ * via the {@link #getOutput(String)} or {@link #getOutput(Output)} methods.
  */
 public class RemoteStateReference extends CustomResource {
     /**
@@ -20,8 +20,9 @@ public class RemoteStateReference extends CustomResource {
 
     /**
      * Create a RemoteStateReference resource with the given unique name, arguments, and options.
-     * <param name="name">The unique name of the remote state reference.</param>
-     * <param name="args">The arguments to use to populate this resource's properties.</param>
+     *
+     * @param name The unique name of the remote state reference.
+     * @param args The arguments to use to populate this resource's properties.
      */
     public RemoteStateReference(String name, RemoteStateReferenceArgs args) {
         super("terraform:state:RemoteStateReference",
@@ -32,9 +33,10 @@ public class RemoteStateReference extends CustomResource {
 
     /**
      * Create a RemoteStateReference resource with the given unique name, arguments, and options.
-     * <param name="name">The unique name of the remote state reference.</param>
-     * <param name="args">The arguments to use to populate this resource's properties.</param>
-     * <param name="options">A bag of options that control this resource's behavior.</param>
+     *
+     * @param name    The unique name of the remote state reference.
+     * @param args    The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
      */
     public RemoteStateReference(String name, RemoteStateReferenceArgs args, CustomResourceOptions options) {
         super("terraform:state:RemoteStateReference",
@@ -45,9 +47,10 @@ public class RemoteStateReference extends CustomResource {
 
     /**
      * Fetches the value of a root output from the Terraform Remote State.
-     * <param name="name">The name of the output to fetch. The name is formatted exactly as per
-     * the "output" block in the Terraform configuration.</param>
-     * <returns></returns>
+     *
+     * @param name The name of the output to fetch. The name is formatted exactly as per
+     *             the "output" block in the Terraform configuration.
+     * @return
      */
     public Output<Object> getOutput(String name) {
 
@@ -56,9 +59,10 @@ public class RemoteStateReference extends CustomResource {
 
     /**
      * Fetches the value of a root output from the Terraform Remote State.
-     * <param name="name">The name of the output to fetch. The name is formatted exactly as per
-     * the "output" block in the Terraform configuration.</param>
-     * <returns></returns>
+     *
+     * @param name The name of the output to fetch. The name is formatted exactly as per
+     *             the "output" block in the Terraform configuration.
+     * @return
      */
     public Output<Object> getOutput(Output<String> name) {
 
