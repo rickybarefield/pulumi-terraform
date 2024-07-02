@@ -2,8 +2,10 @@ package com.pulumi.terraform.state;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
+import com.pulumi.core.internal.OutputCompletionSource;
 import com.pulumi.resources.CustomResource;
 import com.pulumi.resources.CustomResourceOptions;
+import lombok.Data;
 
 import java.util.Map;
 
@@ -15,7 +17,7 @@ public class RemoteStateReference extends CustomResource {
     /**
      * The root outputs of the referenced Terraform state.
      */
-    @Export(name = "outputs")
+    @Export(name = "outputs", refs = {Map.class, String.class, Object.class}, tree = "[0, 1, 2]")
     public Output<Map<String, Object>> outputs;
 
     /**
@@ -69,5 +71,12 @@ public class RemoteStateReference extends CustomResource {
         return Output.tuple(name, outputs).applyValue(both -> both.t2.get(both.t1));
     }
 
+    public Output<Map<String, Object>> getOutputs() {
+        return outputs;
+    }
+
+    public void setOutputs(Output<Map<String, Object>> outputs) {
+        this.outputs = outputs;
+    }
 }
     
